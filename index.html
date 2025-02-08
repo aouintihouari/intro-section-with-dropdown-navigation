@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="overlay"></div>
+      <header class="header">
+        <div class="logo-nav-container">
+          <img class="logo" src="images/logo.svg" alt="logo" />
+          <div class="navigation-bar">
+            <nav class="navigation">
+              <ul class="navigation__list">
+                <li class="navigation-item features">
+                  Features
+                  <img
+                    class="arrow features__arrow"
+                    src="images/icon-arrow-down.svg"
+                    alt="arrow"
+                  />
+                  <ul class="navigation__sublist features__sublist">
+                    <li class="dropdown-item">
+                      <img class="dropdown-image" src="images/icon-todo.svg" />
+                      Todo List
+                    </li>
+                    <li class="dropdown-item">
+                      <img
+                        class="dropdown-image"
+                        src="images/icon-calendar.svg"
+                      />
+                      Calendar
+                    </li>
+                    <li class="dropdown-item">
+                      <img
+                        class="icon-reminders dropdown-image"
+                        src="images/icon-reminders.svg"
+                      />
+                      Reminders
+                    </li>
+                    <li class="dropdown-item">
+                      <img
+                        class="dropdown-image"
+                        src="images/icon-planning.svg"
+                      />
+                      Planning
+                    </li>
+                  </ul>
+                </li>
+                <li class="navigation-item company">
+                  Company
+                  <img
+                    class="arrow company__arrow"
+                    src="images/icon-arrow-down.svg"
+                    alt="arrow"
+                  />
+                  <ul class="navigation__sublist company__sublist">
+                    <li class="dropdown-item">History</li>
+                    <li class="dropdown-item">Our Team</li>
+                    <li class="dropdown-item">Blog</li>
+                  </ul>
+                </li>
+                <li class="navigation-item">Careers</li>
+                <li class="navigation-item">About</li>
+                <ul class="mobile-login-sign-up">
+                  <li class="login">Login</li>
+                  <li class="register">Register</li>
+                </ul>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <ul class="desktop-login-sign-up">
+          <li class="login">Login</li>
+          <li class="register">Register</li>
+        </ul>
+        <img class="menu open" src="images/icon-menu.svg" alt="" />
+      </header>
+      <article class="content">
+        <section class="content__image"></section>
+        <article class="content__text">
+          <h1 class="content__title">Make remote work</h1>
+          <p class="content__description">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button class="learn-more">Learn more</button>
+          <footer class="social-links">
+            <img class="databiz" src="images/client-databiz.svg" alt="" />
+            <img class="audiophile" src="images/client-audiophile.svg" alt="" />
+            <img class="meet" src="images/client-meet.svg" alt="" />
+            <img class="maker" src="images/client-maker.svg" alt="" />
+          </footer>
+        </article>
+      </article>
+    </main>
+  </body>
+</html>
