@@ -8,7 +8,7 @@
 html,
 body {
   height: 100%;
-  font-family: Arial, sans-serif;
+  font-family: var(--font-family);
 }
 
 ul,
@@ -57,383 +57,394 @@ ul li {
   --almost-white: hsl(0, 0%, 98%);
   --medium-gray: hsl(0, 0%, 41%);
   --almost-black: hsl(0, 0%, 8%);
-  --font-family: "Epilogue", sans-serif;
+  --font-family: "Epilogue", serif;
   --font-weight-regular: 500;
   --font-weight-bold: 700;
   --font-size-paragraph: 18px;
 }
 
-@media screen and (max-width: 767.9999999px) {
-  .container {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    font-family: var(--font-family);
-    font-size: var(--font-size-paragraph);
-    font-weight: var(--font-weight-regular);
-    color: var(--medium-gray);
-    background-color: #fafafa;
-  }
+.container {
+  height: 100%;
+  width: 100%;
+}
 
-  .desktop-login-sign-up {
-    display: none;
-  }
+.navigation-desktop {
+  display: none;
+}
 
-  .overlay {
-    display: none;
-    top: 0;
-    left: 0;
-    position: absolute;
-    z-index: 1;
-    width: 30%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
+.account-access-desktop {
+  display: none !important;
+}
 
-  .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-  }
+.overlay {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  width: 40%;
+  height: 100%;
+}
 
-  .navigation-bar {
-    position: absolute;
-    width: 70%;
-    display: flex;
-    justify-content: flex-start;
-  }
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
 
-  .menu {
-    display: block;
-  }
+.navigation {
+  padding: 15px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 1;
+  display: none;
+  width: 60%;
+  height: 100%;
+}
 
-  .open {
-    width: 32px;
-    height: 18px;
-  }
+.navigation__list {
+  margin-top: 20px;
+}
 
-  .close {
-    width: 24.04px;
-    height: 24.04px;
-  }
+.navigation__list,
+.account-access {
+  align-self: self-start;
+}
 
-  .show {
-    display: flex;
-  }
+.navigation__item {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--medium-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
 
-  .logo-nav-container {
-    z-index: 10;
-  }
+.navigation__item:hover {
+  color: var(--almost-black);
+}
 
-  .navigation {
-    display: none;
-    height: 100%;
-    position: absolute;
-    top: 10%;
-    right: 15%;
-  }
+.features__item,
+.company__item,
+.careers__item,
+.about__item,
+.dropdown-features__element,
+.dropdown-company__element {
+  margin-block: 10px;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 
-  .navigation__list {
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
+.arrow-features {
+  width: 10px;
+  height: auto;
+}
 
-  .navigation-item {
-    margin-block: 15px;
-    position: relative;
-    display: flex;
-  }
+.dropdown-features,
+.dropdown-company {
+  display: none;
+  flex-direction: column;
+}
 
-  .navigation-item:hover {
-    color: var(--almost-black);
-  }
+.dropdown-features__item {
+  display: flex;
+  margin-left: 30px;
+  transition: 0.5s;
+}
 
-  .company {
-    width: 200px;
-  }
+.dropdown-features__item:hover {
+  color: var(--almost-black);
+}
 
-  .arrow {
-    margin-top: 5px;
-    width: 16px;
-    height: 8px;
-    margin-left: 10px;
-  }
+.account-access,
+.account-access-desktop {
+  margin-block: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--medium-gray);
+}
 
-  .features__sublist,
-  .company__sublist {
-    display: none;
-    margin-top: 10px;
-    height: 200px;
-    flex-direction: column;
-    position: absolute;
-    top: 10%;
-    left: 30%;
-  }
+.login {
+  transition: 0.5s;
+  margin-block: 15px;
+}
 
-  .dropdown-item {
-    margin-block: 10px;
-    display: flex;
-    justify-content: flex-start;
-  }
+.login:hover {
+  color: var(--almost-black);
+}
 
-  .dropdown-item:hover {
-    color: var(--almost-black);
-  }
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+  width: 100%;
+  background-color: var(--almost-white);
+  color: var(--almost-black);
+  border: solid 1px var(--almost-black);
+  border-radius: 14px;
+  transition: 0.5s;
+}
 
-  .dropdown-image {
-    display: block;
-    margin-inline: 10px;
-  }
+.register:hover {
+  border-color: var(--almost-black);
+  color: var(--almost-black);
+}
 
-  .mobile-login-sign-up {
-    margin-top: 20px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+.content {
+  width: 100%;
+}
 
-  .mobile-login-sign-up .login {
-    margin-block: 40px;
-  }
+.content__image {
+  margin-block: 25px;
+  width: 100%;
+  height: 281.25px;
+  background-image: url("images/image-hero-mobile.png");
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-  .mobile-login-sign-up .login:hover {
-    color: var(--almost-black);
-  }
+.content__text {
+  margin-top: 35px;
+  text-align: center;
+}
 
-  .mobile-login-sign-up .register {
-    border: 1px solid var(--medium-gray);
-    border-radius: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 42px;
-  }
+.content__text-title {
+  margin-block: 25px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: -0.5px;
+  color: var(--almost-black);
+}
 
-  .mobile-login-sign-up .register:hover {
-    color: var(--almost-black);
-    border-color: var(--almost-black);
-  }
+.content__text-description {
+  margin-inline: auto;
+  width: 72%;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: var(--medium-gray);
+}
 
-  .content {
-    position: relative;
-    z-index: -1;
-    display: flex;
-    flex-direction: column;
-  }
+.learn-more {
+  transition: 0.5s;
+  font-size: 16px;
+  height: 48px;
+  width: 136px;
+  border: 1px solid var(--almost-black);
+  border-radius: 15px;
+  margin-block: 25px;
+  background-color: var(--almost-black);
+  color: var(--almost-white);
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -0.222222px;
+}
+
+.learn-more:hover {
+  background-color: transparent;
+  color: var(--almost-black);
+}
+
+.footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.databiz {
+  width: 81.25px;
+  height: 14.36px;
+}
+
+.audiophile {
+  width: 52.87px;
+  height: 26px;
+}
+
+.meet {
+  width: 64.14px;
+  height: 14.36px;
+}
+
+.maker {
+  width: 58.9px;
+  height: 17.23px;
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 100px;
-    font-family: var(--font-family);
-    font-size: var(--font-size-paragraph);
-    font-weight: var(--font-weight-regular);
-    color: var(--medium-gray);
-    background-color: #fafafa;
+    overflow: hidden;
+  }
+
+  .open,
+  .close,
+  .navigation-mobile {
+    display: none;
   }
 
   .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    font-size: 16px;
-  }
-
-  .logo-nav-container {
-    display: flex;
+    padding: 5px 30px;
+    width: 100%;
+    align-items: center;
     justify-content: space-between;
   }
 
-  .logo {
-    width: 87px;
-    height: 35px;
-  }
-
-  .navigation {
-    margin-left: 80px;
-  }
-
-  .navigation__list {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .navigation-item {
-    transition: 0.5s;
-    cursor: pointer;
+  .navigation-desktop {
     display: flex;
     margin-left: 80px;
   }
 
-  .navigation-item:hover {
-    color: var(--almost-black);
-  }
-
-  .arrow {
-    margin-left: 10px;
-    align-self: center;
-    width: 16px;
-    height: 8px;
-  }
-
-  .features {
-    position: relative;
-  }
-
-  .features__sublist,
-  .company__sublist {
-    top: 40px;
-    font-size: 16px;
-    padding: 10px;
-    box-shadow: 0 0 10px 1px rgb(220, 220, 220, 0.3);
-    background-color: #fff;
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    position: absolute;
-    border-radius: 10px;
-  }
-
-  .features__sublist {
-    left: -50px;
-    width: 153px;
-    height: 160px;
-  }
-
-  .company__sublist {
-    padding-inline: 10px;
-    width: 116px;
-    height: 128px;
-  }
-
-  .dropdown-item {
-    transition: 0.5s;
-    color: var(--medium-gray);
-    cursor: pointer;
+  .navigation__list-desktop {
     display: flex;
     align-items: center;
   }
 
-  .dropdown-item:hover {
+  .navigation__item-desktop {
+    transition: 0.5s;
+    cursor: pointer;
+    color: var(--medium-gray);
+    margin-right: 80px;
+  }
+
+  .navigation__item-desktop:hover {
     color: var(--almost-black);
   }
 
-  .dropdown-image {
-    margin-right: 10px;
-  }
-
-  .desktop-login-sign-up {
+  .features-desktop,
+  .company-desktop {
+    position: relative;
     display: flex;
+    align-items: center;
+    gap: 5px;
   }
 
-  .mobile-login-sign-up {
+  .dropdown-features__desktop,
+  .dropdown-company__desktop {
+    padding-left: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    color: var(--medium-gray);
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 30px;
     display: none;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .register {
-    margin-top: -10px;
+  .dropdown-features__desktop {
+    left: -70%;
+    width: 143px;
+    height: 150px;
+  }
+
+  .dropdown-company__desktop {
+    width: 116px;
+    height: 110px;
+  }
+
+  .dropdown-features__desktop-element,
+  .dropdown-company__desktop-element {
+    transition: 0.5s;
+    margin-block: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .dropdown-features__desktop-element:hover,
+  .dropdown-company__desktop-element:hover {
+    color: var(--almost-black);
+  }
+
+  .account-access-desktop {
+    display: flex !important;
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+
+  .desktop-login {
+    cursor: pointer;
+    transition: 0.5s;
+    margin-block: 15px;
+    margin-right: 50px;
+  }
+
+  .desktop-login:hover {
+    color: var(--almost-black);
+  }
+
+  .desktop-register {
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.5s;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--almost-white);
+    color: var(--almost-black);
+    border: solid 1px var(--almost-black);
     width: 104px;
     height: 42px;
-    border: solid 1px var(--medium-gray);
-    border-radius: 14px;
-  }
-
-  .register,
-  .login {
-    margin-right: 50px;
-    transition: 1s;
-    cursor: pointer;
-  }
-
-  .login:hover,
-  .register:hover {
-    border-color: var(--almost-black);
-    color: var(--almost-black);
-  }
-
-  .show {
-    display: flex;
-  }
-
-  .menu {
-    display: none;
   }
 
   .content {
-    margin-top: 40px;
-    background-color: var(--almost-white);
-    padding-inline: 10%;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   .content__image {
-    width: 50%;
+    width: 480px;
     height: 640px;
     background-image: url("images/image-hero-desktop.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-size: cover 640px;
   }
 
   .content__text {
-    width: 50%;
+    text-align: left;
+    width: 40%;
+    margin-top: 105px;
   }
 
-  .content__title {
-    margin-block: 100px 50px;
-    width: 78%;
-    font-weight: 700;
+  .content__text-title {
+    width: 86%;
     font-size: 80px;
     line-height: 80px;
     letter-spacing: -1.11111px;
-    color: var(--almost-black);
   }
 
-  .content__description {
-    width: 70%;
-    font-weight: 500;
+  .content__text-description {
+    width: 68%;
+    margin-inline: 0;
+    text-align: left;
     font-size: 18px;
     line-height: 28px;
-    color: var(--medium-gray);
   }
 
   .learn-more {
-    margin-block: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--almost-black);
-    color: var(--almost-white);
-    border: 1px solid var(--almost-black);
-    border-radius: 15px;
-    font-weight: 700;
     width: 163px;
     height: 56px;
   }
 
-  .learn-more:hover {
-    background-color: transparent;
-    color: var(--almost-black);
-  }
-
-  .social-links {
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
+  .footer {
+    margin-top: 50px;
   }
 
   .databiz {

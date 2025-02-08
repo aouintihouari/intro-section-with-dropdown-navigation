@@ -9,6 +9,12 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
@@ -17,92 +23,203 @@
     <main class="container">
       <div class="overlay"></div>
       <header class="header">
-        <div class="logo-nav-container">
-          <img class="logo" src="images/logo.svg" alt="logo" />
-          <div class="navigation-bar">
-            <nav class="navigation">
-              <ul class="navigation__list">
-                <li class="navigation-item features">
-                  Features
-                  <img
-                    class="arrow features__arrow"
-                    src="images/icon-arrow-down.svg"
-                    alt="arrow"
-                  />
-                  <ul class="navigation__sublist features__sublist">
-                    <li class="dropdown-item">
-                      <img class="dropdown-image" src="images/icon-todo.svg" />
-                      Todo List
-                    </li>
-                    <li class="dropdown-item">
-                      <img
-                        class="dropdown-image"
-                        src="images/icon-calendar.svg"
-                      />
-                      Calendar
-                    </li>
-                    <li class="dropdown-item">
-                      <img
-                        class="icon-reminders dropdown-image"
-                        src="images/icon-reminders.svg"
-                      />
-                      Reminders
-                    </li>
-                    <li class="dropdown-item">
-                      <img
-                        class="dropdown-image"
-                        src="images/icon-planning.svg"
-                      />
-                      Planning
-                    </li>
-                  </ul>
+        <img class="logo" src="images/logo.svg" alt="logo" />
+        <img class="open" src="images/icon-menu.svg" alt="menu" />
+        <nav class="navigation navigation-mobile">
+          <img class="close" src="images/icon-close-menu.svg" alt="menu" />
+          <ul class="navigation__list">
+            <li class="navigation__item features__mobile features">
+              <span class="features__item">
+                Features
+                <img
+                  class="arrow-features"
+                  src="images/icon-arrow-down.svg"
+                  alt="arrow-down"
+                />
+              </span>
+              <ul class="dropdown-features dropdown-features__mobile">
+                <li class="dropdown-features__item">
+                  <span class="dropdown-features__element">
+                    <img
+                      class="dropdown-features__image"
+                      src="images/icon-todo.svg"
+                      alt=""
+                    />
+                    Todo List
+                  </span>
                 </li>
-                <li class="navigation-item company">
-                  Company
-                  <img
-                    class="arrow company__arrow"
-                    src="images/icon-arrow-down.svg"
-                    alt="arrow"
-                  />
-                  <ul class="navigation__sublist company__sublist">
-                    <li class="dropdown-item">History</li>
-                    <li class="dropdown-item">Our Team</li>
-                    <li class="dropdown-item">Blog</li>
-                  </ul>
+                <li class="dropdown-features__item">
+                  <span class="dropdown-features__element">
+                    <img
+                      class="dropdown-features__image"
+                      src="images/icon-calendar.svg"
+                      alt=""
+                    />
+                    Calendar
+                  </span>
                 </li>
-                <li class="navigation-item">Careers</li>
-                <li class="navigation-item">About</li>
-                <ul class="mobile-login-sign-up">
-                  <li class="login">Login</li>
-                  <li class="register">Register</li>
-                </ul>
+                <li class="dropdown-features__item">
+                  <span class="dropdown-features__element">
+                    <img
+                      class="dropdown-features__image"
+                      src="images/icon-reminders.svg"
+                      alt=""
+                    />
+                    Reminders
+                  </span>
+                </li>
+                <li class="dropdown-features__item">
+                  <span class="dropdown-features__element">
+                    <img
+                      class="dropdown-features__image"
+                      src="images/icon-planning.svg"
+                      alt=""
+                    />
+                    Planning
+                  </span>
+                </li>
               </ul>
-            </nav>
-          </div>
-        </div>
-        <ul class="desktop-login-sign-up">
-          <li class="login">Login</li>
-          <li class="register">Register</li>
+            </li>
+            <li class="navigation__item company__mobile company">
+              <span class="company__item">
+                Company
+                <img
+                  class="arrow-company"
+                  src="images/icon-arrow-down.svg"
+                  alt="arrow-down"
+                />
+              </span>
+              <ul class="dropdown-company dropdown-company__mobile">
+                <li class="dropdown-company__item">
+                  <span class="dropdown-company__element">History</span>
+                </li>
+                <li class="dropdown-company__item">
+                  <span class="dropdown-company__element">Our Team</span>
+                </li>
+                <li class="dropdown-company__item">
+                  <span class="dropdown-company__element">Blog</span>
+                </li>
+              </ul>
+            </li>
+            <li class="navigation__item careers">
+              <span class="careers__item">Careers</span>
+            </li>
+            <li class="navigation__item about">
+              <span class="about__item">About</span>
+            </li>
+          </ul>
+          <ul class="account-access">
+            <li class="login">Login</li>
+            <li class="register">Register</li>
+          </ul>
+        </nav>
+        <nav class="navigation-desktop">
+          <ul class="navigation__list-desktop">
+            <li class="navigation__item-desktop navigation__features-desktop">
+              <span class="features-desktop"
+                >Features
+                <img
+                  class="arrow-desktop"
+                  src="images/icon-arrow-down.svg"
+                  alt=""
+              /></span>
+              <ul class="dropdown-features__desktop">
+                <li class="dropdown-features__desktop-item">
+                  <span class="dropdown-features__desktop-element"
+                    ><img
+                      class="dropdown-features__desktop-image"
+                      src="images/icon-todo.svg"
+                      alt=""
+                    />
+                    Todo List</span
+                  >
+                </li>
+                <li class="dropdown-features__desktop-item">
+                  <span class="dropdown-features__desktop-element"
+                    ><img
+                      class="dropdown-features__desktop-image"
+                      src="images/icon-calendar.svg"
+                      alt=""
+                    />
+                    Calendar</span
+                  >
+                </li>
+                <li class="dropdown-features__desktop-item">
+                  <span class="dropdown-features__desktop-element"
+                    ><img
+                      class="dropdown-features__desktop-image"
+                      src="images/icon-reminders.svg"
+                      alt=""
+                    />
+                    Reminders</span
+                  >
+                </li>
+                <li class="dropdown-features__desktop-item">
+                  <span class="dropdown-features__desktop-element"
+                    ><img
+                      class="dropdown-features__desktop-image"
+                      src="images/icon-planning.svg"
+                      alt=""
+                    />
+                    Planning</span
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="navigation__item-desktop navigation__company-desktop">
+              <span class="company-desktop"
+                >Company
+                <img
+                  class="arrow-desktop"
+                  src="images/icon-arrow-down.svg"
+                  alt=""
+              /></span>
+              <ul class="dropdown-company__desktop">
+                <li class="dropdown-company__desktop-item">
+                  <span class="dropdown-company__desktop-element">
+                    History</span
+                  >
+                </li>
+                <li class="dropdown-company__desktop-item">
+                  <span class="dropdown-company__desktop-element">
+                    Our Team</span
+                  >
+                </li>
+                <li class="dropdown-company__desktop-item">
+                  <span class="dropdown-company__desktop-element"> Blog</span>
+                </li>
+              </ul>
+            </li>
+            <li class="navigation__item-desktop">
+              <span class="careers-desktop">Careers</span>
+            </li>
+            <li class="navigation__item-desktop">
+              <span class="about-desktop">About</span>
+            </li>
+          </ul>
+        </nav>
+        <ul class="account-access-desktop">
+          <li class="desktop-login">Login</li>
+          <li class="desktop-register">Register</li>
         </ul>
-        <img class="menu open" src="images/icon-menu.svg" alt="" />
       </header>
-      <article class="content">
+      <section class="content">
         <section class="content__image"></section>
         <article class="content__text">
-          <h1 class="content__title">Make remote work</h1>
-          <p class="content__description">
+          <h1 class="content__text-title">Make remote work</h1>
+          <p class="content__text-description">
             Get your team in sync, no matter your location. Streamline
             processes, create team rituals, and watch productivity soar.
           </p>
           <button class="learn-more">Learn more</button>
-          <footer class="social-links">
+          <footer class="footer">
             <img class="databiz" src="images/client-databiz.svg" alt="" />
             <img class="audiophile" src="images/client-audiophile.svg" alt="" />
             <img class="meet" src="images/client-meet.svg" alt="" />
             <img class="maker" src="images/client-maker.svg" alt="" />
           </footer>
         </article>
-      </article>
+      </section>
     </main>
   </body>
 </html>
